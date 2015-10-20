@@ -1,17 +1,27 @@
 # cogito
 
 The name of the software is a reflection of the process of human thought: 
-to think, to shake up
+to think, to shake up.  It was written as part of my doctoral work in
+Computer Science at Simon Fraser University.
 
-Dissertation related to this software: 
+## Dissertation title: 
 A new paradigm for exploration in computer-aided visualization
 
-Abstract:
-	This dissertation examines how the computer can aid the creative human 
+* [full-text on academia.edu](
+https://www.academia.edu/17038648/A_New_Paradigm_for_Exploration_in_Computer-Aided_Visualization)
+
+* [full-text on researchgate.net](
+https://www.researchgate.net/publication/283013594_A_New_Paradigm_for_Exploration_in_Computer-Aided_Visualization)
+
+## Dissertation abstract:
+
+This dissertation examines how the computer can aid the creative human 
 endeavour which is data visualization. That computers now critically aid many 
 fields is apparent, as is evidenced by the breadth of contemporary research on 
 this topic.
-	Indeed, computers have contributed widely to the whole area of data 
+
+
+Indeed, computers have contributed widely to the whole area of data 
 comprehension, both in performing extensive computations and in producing 
 visual representations of the results. Computers originally aided 
 mathematicians who could both write the instructions necessary to direct the 
@@ -23,7 +33,9 @@ data which allow them insight into their problems. For example, today’s
 mathematicians who are generally expert in exploiting computational 
 opportunities for experimentation may lack similar experience in opportunities 
 for visual exploration.
-	Of particular concern is how a computer-aided visualization tool can be 
+
+
+Of particular concern is how a computer-aided visualization tool can be 
 designed to support the user’s goal of obtaining insight. There are many visual
 representations for a given set of data, and different people may obtain insight
 from different visual representations. Selection of the “best” one for an 
@@ -34,13 +46,17 @@ of restricting the choices that the user is allowed to make, or the designs
 focus on providing only the raw materials necessary for constructing the 
 representations, leaving the user unrestricted but potentially unaided in 
 searching out the desired representation.
-	The novel approach presented in this dissertation adapts a genetic 
+
+
+The novel approach presented in this dissertation adapts a genetic 
 algorithm to provide a means for an individual to search alternative visual 
 representations in a systematic and manageable way. Any visual representation 
 is a combination of elements, each selected from a different component. This 
 approach encourages the individual’s creativity without restricting available 
 choices, and leaves the task of bookkeeping to the computer.
-	A computer-aided visualization system which is driven by the unique 
+
+
+A computer-aided visualization system which is driven by the unique 
 preferences of each user has been developed. The efficacy of this system, 
 cogito, is demonstrated through a software user study. From an initial 
 specification of components and elements, the system provides a wide variety 
