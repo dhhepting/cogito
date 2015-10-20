@@ -1,13 +1,17 @@
 <h1>Screen</h1>
 
 {% if combination_list %}
-	{% load staticfiles %}
-	{% csrf_token %}
-	<ol>
-	{% for combo in combination_list %}
-		<li><a href="/static/{{ combo.combination }}"><img src="/static/{{ combo.combination }}" width=128 alt="{{ combo.combination }}"/></a></li> 
-    	{% endfor %}
-	</ol>
+        {% load staticfiles %}
+        {% csrf_token %}
+        <table>
+        <tr>
+        {% for combo in combination_list %}
+                <td><a href="/static/{{ combo.combination }}"><img src="/static/{{ combo.combination }}" width=256 alt="{{ combo.combination }}"/></a></td> 
+                {% if forloop.counter0 == 3 %}
+                        </tr><tr>
+                {% endif %}
+        {% endfor %}
+        </tr></table>
 {% else %}
         <p>No combinations are available.</p>
 {% endif %}
