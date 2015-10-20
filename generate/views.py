@@ -20,24 +20,25 @@ def gen_screen():
     seq_index = 0
     ns_index = 0
     ctxt = Context()
-    tmpl = loader.get_template('simple_curve.gp')
+    tmpl = loader.get_template('simple_curve.ct')
     for i in range(8):
         for j in range(len(parms)):
             if j == seq:
-                ctxt['p'+str(j)] = str((parms[j])[seq_index])
+                ctxt['p'+str(j+1)] = str((parms[j])[seq_index])
                 seq_index += 1
                 seq_index %= len(parms[j])
             else:
                 ns_index = random.randrange(len(parms[j]))
-                ctxt['p'+str(j)] = str((parms[j])[ns_index])
-        cfname = 'generate/' + ctxt['p0'] + '-' + ctxt['p1'] + '-' + ctxt['p2'] + '.png'
-        print (cfname)
-        c = Combination(combination=cfname)
+                ctxt['p'+str(j+1)] = str((parms[j])[ns_index])
+        combo = ctxt['p1'] + '-' + ctxt['p2'] + '-' + ctxt['p3']
+        ctxt['p0'] = combo
+        c = Combination(combination=combo)
         c.save()
 
-        with open('t.gp', 'w') as fpout:
+        combo_cf = 'generate/static/generate/' + combo + '.gp'
+        with open(combo_cf, 'w') as fpout:
             fpout.write(tmpl.render(ctxt))
-        subprocess.run(["/usr/local/bin/gnuplot", "t.gp"], check=True)
+        subprocess.run(["/usr/local/bin/gnuplot", combo_cf], check=True)
 
 # Create your views here.
 
@@ -60,7 +61,7 @@ class ResultsView(generic.DetailView):
 class ScreenView(generic.ListView):
     template_name = 'generate/screen.html'
     context_object_name = 'combination_list'
-    #gen_screen()
+    gen_screen()
 
     def get_queryset(self):
         """Return the last five published questions."""
