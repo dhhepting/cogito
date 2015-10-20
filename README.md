@@ -4,7 +4,7 @@ The name of the software is a reflection of the process of human thought:
 to think, to shake up.  It was written as part of my doctoral work in
 Computer Science at Simon Fraser University.
 
-## Dissertation title: 
+#### Dissertation title: 
 A new paradigm for exploration in computer-aided visualization
 
 * [full-text on academia.edu](
@@ -13,7 +13,7 @@ https://www.academia.edu/17038648/A_New_Paradigm_for_Exploration_in_Computer-Aid
 * [full-text on researchgate.net](
 https://www.researchgate.net/publication/283013594_A_New_Paradigm_for_Exploration_in_Computer-Aided_Visualization)
 
-## Dissertation abstract:
+#### Dissertation abstract:
 
 This dissertation examines how the computer can aid the creative human 
 endeavour which is data visualization. That computers now critically aid many 
