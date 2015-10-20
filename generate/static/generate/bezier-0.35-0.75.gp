@@ -1,3 +1,5 @@
+
+
 set term png
 
 set output "generate/static/generate/bezier-0.35-0.75.png"
