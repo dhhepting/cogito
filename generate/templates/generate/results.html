@@ -1,0 +1,9 @@
+<h1>{{ parameter.parameter_name }}</h1>
+
+<ul>
+{% for choice in parameter.value_set.all %}
+    <li>{{ choice.value }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'generate:detail' parameter.id %}">Vote again?</a>

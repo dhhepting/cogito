@@ -1,0 +1,13 @@
+<h1>Screen</h1>
+
+{% if combination_list %}
+	{% load staticfiles %}
+	{% csrf_token %}
+	<ol>
+	{% for combo in combination_list %}
+		<li><a href="/static/{{ combo.combination }}"><img src="/static/{{ combo.combination }}" width=128 alt="{{ combo.combination }}"/></a></li> 
+    	{% endfor %}
+	</ol>
+{% else %}
+        <p>No combinations are available.</p>
+{% endif %}

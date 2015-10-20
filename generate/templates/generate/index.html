@@ -1,0 +1,22 @@
+{% if parameter_list %}
+	{% csrf_token %}
+	<table border=2>
+	<tr>
+	{% for parm in parameter_list %}
+        	<th> {{ parm.parameter_name }} </th>
+    	{% endfor %}
+	</tr>
+	<tr>
+	{% for parm in parameter_list %}
+		<td><ul>
+		{% for value in parm.value_set.all %}
+			<li> {{ value.value }} </li>
+		{% endfor %}
+		</ul></td>
+    	{% endfor %}
+    	</tr>
+	</table>
+	<a href="{% url 'generate:screen' 0 %}">Generate</a>
+{% else %}
+    	<p>No parameters are available.</p>
+{% endif %}
