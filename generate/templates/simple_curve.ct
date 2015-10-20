@@ -1,0 +1,13 @@
+{# $Id #}
+
+set term png
+
+set output "generate/static/generate/{{ p0 }}.png"
+plot '-' smooth {{ p1 }} notitle
+0 0
+0.33 {{ p2 }}
+0.67 {{ p3 }} 
+1 1
+e
+
+reset;
