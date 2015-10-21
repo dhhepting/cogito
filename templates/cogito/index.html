@@ -1,0 +1,17 @@
+<h1>Welcome to <em>cogito</em></h1>
+
+{% if real  %}
+	Welcome {{ request.user }}
+{% else %}
+	Please log in :-)
+{% endif %}
+<!--
+def sample_view(request):
+    current_user = request.user
+    print current_user.id
+request.user will give you a User object representing the currently logged-in user. If a user isn't currently logged in, request.user will be set to an instance of AnonymousUser. You can tell them apart with is_authenticated(), like so:
+
+if request.user.is_authenticated():
+    # Do something for authenticated users.
+else:
+    # Do something for anonymous users. -->
