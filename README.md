@@ -4,6 +4,12 @@ The name of the software is a reflection of the process of human thought:
 to think, to shake up.  It was written as part of my doctoral work in
 Computer Science at Simon Fraser University.
 
+This software is based on:
+* django 1.8.5
+* python 3.5
+
+It expects that gnuplot is available at /usr/local/bin/gnuplot
+
 #### Dissertation title: 
 A new paradigm for exploration in computer-aided visualization
 
