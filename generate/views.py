@@ -32,6 +32,7 @@ def gen_screen():
                 ctxt['p'+str(j+1)] = str((parms[j])[ns_index])
         combo = ctxt['p1'] + '-' + ctxt['p2'] + '-' + ctxt['p3']
         ctxt['p0'] = combo
+        print(combo)
         c = Combination(combination=combo)
         c.save()
 

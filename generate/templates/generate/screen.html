@@ -6,7 +6,9 @@
         <table>
         <tr>
         {% for combo in combination_list %}
-                <td><a href="/static/{{ combo.combination }}"><img src="/static/{{ combo.combination }}" width=256 alt="{{ combo.combination }}"/></a></td> 
+                <td><a href="/static/generate/{{ combo.combination }}.png">
+		<img src="/static/generate/{{ combo.combination }}.png" width=256 
+		alt="{{ combo.combination }}"/></a></td> 
                 {% if forloop.counter0 == 3 %}
                         </tr><tr>
                 {% endif %}
